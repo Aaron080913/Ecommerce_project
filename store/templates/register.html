@@ -12,7 +12,7 @@
 </header>
 
 <div class="container">
-    <div class="row"><center><div class="col-8">
+    <div class="row"><div class="col-md-6 offset-md-3 mt-3 mb-3">
         <form method="POST" action="{% url 'register' %}">
             {% csrf_token %}
             
@@ -20,6 +20,6 @@
             <button type="submit" class="btn btn-dark">Register</button>
             
           </form>
-    </div></center></div>
+    </div></div>
 </div>
 {% endblock %}

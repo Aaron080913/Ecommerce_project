@@ -7,6 +7,12 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import SignUpForm
 from django import forms
 
+def product(request,pk):
+    product = Product.objects.get(id=pk)
+    return render(request, 'product.html', {'product':product})
+
+
+
 def home(request):
     products = Product.objects.all()
     return render(request, 'home.html', {'products':products})
@@ -52,6 +58,6 @@ def register_user(request):
             messages.success(request, ("an issue occurred, please try again"))
             return redirect('register')
     else:
-        return render(request, 'register.html', {})
+        return render(request, 'register.html', {'form':form})
 
-    return render(request, 'register.html', {'form':form})
+  
