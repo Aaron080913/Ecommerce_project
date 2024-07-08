@@ -8,7 +8,7 @@
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Shopping Cart</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">View Your Cart...</p>
+                    <h3>Total: ${{ totals }}</h3>
                 </div>
             </div>
         </header>
@@ -86,7 +86,7 @@
               </div>
                 
             {% endfor %}
-            <h3>Total:</h3>
+            
             {% else %}
             <center>Cart is Empty</center>
             {% endif %}
