@@ -5,8 +5,6 @@ In this section, you will include one or two paragraphs providing an overview of
 Tiny Toez is a site that welcomes new parents to the most upmarket shoes for their little ones! the site will be targeted towards parents/family and friends for a way to simply browse through different shoe designs. Tiny Toez lets customers use the website, browse shoes, add them to the cart, and finally checkout.
 
 
-![Responsice Mockup](https://github.com/lucyrush/readme-template/blob/master/media/love_running_mockup.png)
-
 ### Existing Features
 
 - __Navigation Bar__
@@ -15,14 +13,12 @@ Tiny Toez is a site that welcomes new parents to the most upmarket shoes for the
   - Aswell as the main functions the cart is also present on our nav bar to show the user how many items are currently in the Cart.
   - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
 
-![Nav Bar](https://github.com/lucyrush/readme-template/blob/master/media/love_running_nav.png)
-
 - __The landing page__
 
   - The landing includes a range of our current products with pictures and a view product button to allow the user to then add the product to their cart. 
   - This section allows the user to browse our current categories and stock with pictures to grab their attention
 
-![Landing Page](https://github.com/lucyrush/readme-template/blob/master/media/love_running_landing.png)
+![Landing Page](media/uploads/Landing page.jpeg)
 
 - __Search Section__
 
