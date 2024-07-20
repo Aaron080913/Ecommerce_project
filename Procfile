@@ -1,2 +1,1 @@
-web: gunicorn
-ECOMMERCE_PROJECT.wsgi
+web: gunicorn Tiny_Toez.wsgi
