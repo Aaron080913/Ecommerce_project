@@ -1,1 +1,1 @@
-web: gunicorn Tiny_Toez.wsgi
+web: gunicorn Tiny_Toez.wsgi:application

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ CSRF_TRUSTED_ORIGINS=['https://8000-aaron080913-ecommercepr-ibibdpi6gxr.ws.codei
 SECRET_KEY = 'django-insecure-p6oxx4**s#%!y@^t)o9=37*n!ee-0qk2=7p8#&zh$z5nv@@lj!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-aaron080913-ecommercepr-ibibdpi6gxr.ws.codeinstitute-ide.net', '.herokuapp.com']
 
@@ -80,13 +81,28 @@ WSGI_APPLICATION = 'Tiny_Toez.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#        'DATABASE_URL': 'postgres://un8qb19pztk:Gd1yoZXuK4MI@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/lurch_crop_bud_174099'
+#    }
+#}
 
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+#DATABASES = {
+#     'default': dj_database_url.parse('postgres://un8qb19pztk:Gd1yoZXuK4MI@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/lurch_crop_bud_174099')
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
