@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 CSRF_TRUSTED_ORIGINS=['https://8000-aaron080913-ecommercepr-ibibdpi6gxr.ws.codeinstitute-ide.net']
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-p6oxx4**s#%!y@^t)o9=37*n!ee-0qk2=7p8#&zh$z5nv@@lj!'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['8000-aaron080913-ecommercepr-ibibdpi6gxr.ws.codeinstitute-ide.net', '.herokuapp.com']
 
