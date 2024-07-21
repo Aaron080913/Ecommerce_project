@@ -25,7 +25,7 @@ CSRF_TRUSTED_ORIGINS=['https://8000-aaron080913-ecommercepr-ibibdpi6gxr.ws.codei
 SECRET_KEY = 'django-insecure-p6oxx4**s#%!y@^t)o9=37*n!ee-0qk2=7p8#&zh$z5nv@@lj!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-aaron080913-ecommercepr-ibibdpi6gxr.ws.codeinstitute-ide.net', '.herokuapp.com']
 
